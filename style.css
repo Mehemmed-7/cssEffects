@@ -1,0 +1,94 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    background: #191919;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+nav
+{
+    background: #191919;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 50;
+}
+nav a
+{
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+}
+section
+{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in 0.9s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section h1
+{
+    color: white;
+    font-size: 150px;
+    letter-spacing: 40px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+section:target
+{
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+section:target h1
+{
+    opacity: 0;
+    animation: 2s fadeIn forwards 1s; 
+}
+@keyframes fadeIn
+{
+    100%
+    {
+        opacity: 1;
+    }
+}
+#second
+{
+    background-image: url(/sport.jpg);
+    background-size: cover;
+}
+#first
+{
+    background-image: url(/cofe.jpg);
+    background-size: cover;
+}
+#fourth
+{
+    background-image: url(/interior.jpg);
+    background-size: cover;
+}
+#third
+{
+    background-image: url(/sahara.jpg);
+    background-size: 1700px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
